@@ -1,7 +1,11 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div className='flex items-center justify-between'> 
         <div className='flex items-center'>
@@ -9,7 +13,7 @@ const Header = () => {
             <h1 className='w-fit font-semibold lg:text-4xl md:text-2xl'> CA MONK</h1>
         </div>
 
-        <Button variant="ghost">Add Blogs</Button>
+        <Button onClick={()=>navigate('/add-blog')} variant="ghost">Add Blogs</Button>
     </div>
   )
 }
